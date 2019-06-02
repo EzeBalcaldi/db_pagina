@@ -1,0 +1,45 @@
+{include file="templates/header.tpl"}
+{include file="templates/NavBarLogeado.tpl"}
+
+    <div id="map" class="mx-auto" style="width: 1120px; height: 580px; background: grey" </div>
+
+
+<div class="">
+  <form method="post" action="AgregarDenuncia">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Longitud</label>
+      <p>-37.33167</p>
+      <input type=""   class="longitudForm" id="longitudForm" name="longitudForm" >
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Latitud</label>
+      <p>-59.13316</p>
+      <input type=""  class="latitudForm" id="latitudForm" name="latitudForm" >
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Informacion</label>
+      <input type="text"  class="descripcionForm" id="descripcionForm" name="descripcionForm"   >
+    </div>
+    <button type="sumbit" name="button"  id="boton">Submit</button>
+  </form>
+</div>
+
+
+<div class="">
+
+
+  {foreach from=$denuncias item=denuncia}
+  <tbody>
+    <tr>
+      <input type="" class="hidden" id="latitud {$denuncia['id_denuncia']}"  value="{$denuncia['latitud']}">
+      <input type="" class="hidden" id="longitud {$denuncia['id_denuncia']}"  value="{$denuncia['longitud']}">
+      <input type="" class="hidden" id="descripcion {$denuncia['id_denuncia']}"  value="{$denuncia['descripcion']}">
+    </tr>
+  </tbody>
+  {/foreach}
+</div>
+
+  </div>
+</div>
+  {include file="templates/footer.tpl"}

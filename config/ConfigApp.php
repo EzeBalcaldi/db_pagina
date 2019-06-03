@@ -15,6 +15,7 @@ class ConfigApp
     public static $ACTIONS = [
       'Home' => 'EmpresaController#Home',
       'GetPosLibres' => 'EmpresaController#GetPosLibres',
+      'Get10Clientes' => 'EmpresaController#Get10Clientes',
 
       // 'jefe'=> 'JefeController#Home',
       // 'ciudadano'=> 'CiudadanoController#Home',

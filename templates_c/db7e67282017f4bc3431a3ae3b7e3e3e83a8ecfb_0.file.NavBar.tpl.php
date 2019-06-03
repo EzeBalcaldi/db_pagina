@@ -1,4 +1,27 @@
-<div class="contenedor_Navbar barra">
+<?php
+/* Smarty version 3.1.33, created on 2019-06-03 23:31:42
+  from 'C:\xampp\htdocs\proyectos\PagBases\templates\NavBar.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5cf591beb470d2_61866395',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'db7e67282017f4bc3431a3ae3b7e3e3e83a8ecfb' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\proyectos\\PagBases\\templates\\NavBar.tpl',
+      1 => 1559597501,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5cf591beb470d2_61866395 (Smarty_Internal_Template $_smarty_tpl) {
+?><div class="contenedor_Navbar barra">
 
     <nav class="navbar navbar-expand-xl navbar-dark bg-primary  ">
     <!-- <a class="navbar-brand " href="#">Municipio de Tandil</a>
@@ -31,3 +54,5 @@
         </div>
           </nav>
   </div>
+<?php }
+}

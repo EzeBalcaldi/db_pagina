@@ -29,6 +29,16 @@
      //$denuncias = $this->model->GetDenuncias(1);
      $this->view->MostrarPosLibres($datos);
    }
+   function Get10Clientes(){
+     $datos = $this->model->Get10Clientes();
+     $this->view->Mostrar10Clientes($datos);
+   }
+   function GetAlquileresEnVencimiento(){
+     $fecha = $_POST["FechaForm"];
+     $datos = $this->model->GetAlquileresEnVencimiento($fecha);
+     //$denuncias = $this->model->GetDenuncias(1);
+     $this->view->MostrarAlquileresEnVencimiento($datos);
+   }
 
 
 

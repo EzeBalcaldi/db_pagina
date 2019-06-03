@@ -22,6 +22,14 @@ class EmpresaView
     $this->Smarty->assign('datos',$datos);
     $this->Smarty->display('templates/HomePosLibres.tpl');
   }
+  function Mostrar10Clientes($datos){
+    $this->Smarty->assign('datos',$datos);
+    $this->Smarty->display('templates/Home10Clientes.tpl');
+  }
+  function MostrarAlquileresEnVencimiento($datos){
+    $this->Smarty->assign('datos',$datos);
+    $this->Smarty->display('templates/HomeAlquileres.tpl');
+  }
 
 
 

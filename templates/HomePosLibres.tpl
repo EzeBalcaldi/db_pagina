@@ -38,14 +38,33 @@
     </div>
     </div>
 
-    <tbody>
-      <tr>
-        {foreach from=$datos item=dato}
-        <input type="text" name="" value="{$dato['nro_posicion']}">
-        <td id="{$dato['nro_posicion']}">numero de posicion {$dato['nro_posicion']}</td>
-        {/foreach}
-      </tr>
-    </tbody>
+
+
+
+      <div class="container-fluid">
+        <table class="table table-hover">
+          <thead class="bg-primary" style="color:white;" >
+              <tr>
+                      <th scope="col">Numero Posicion</th>
+                      <th scope="col">Numero Estanteria</th>
+                      <th scope="col">Numero Fila </th>
+                </tr>
+              </thead>
+            <tbody class="contenedor-tabla" >
+              {foreach from=$datos item=dato}
+                <tr>
+                      <th scope="col">{$dato['nro_posicion']}</th>
+                      <th scope="col">{$dato['nro_estanteria']}</th>
+                      <th scope="col">{$dato['nro_fila']}</th>
+
+                </tr>
+            {/foreach}
+          </tbody>
+        </table>
+      </div>
+
+
+
 
 
 

@@ -23,7 +23,9 @@ class EmpresaModel
 function GetPosLibres($fecha){
   $sentencia = $this->db->prepare( "select * from FN_01_ListaPosLibres(?)");
   $sentencia->execute(array($fecha));
-  return $sentencia->fetch(PDO::FETCH_ASSOC);
+  return $sentencia->fetchAll();
+
+
 }
 
   function GetUsuario($id_usuario){

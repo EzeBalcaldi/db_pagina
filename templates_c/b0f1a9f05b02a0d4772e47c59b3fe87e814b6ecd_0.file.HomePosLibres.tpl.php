@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-03 00:05:40
+/* Smarty version 3.1.33, created on 2019-06-03 00:42:54
   from 'C:\xampp\htdocs\proyectos\TP-Bases\templates\HomePosLibres.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5cf44834cd4ce1_92617735',
+  'unifunc' => 'content_5cf450ee16dae5_20908134',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b0f1a9f05b02a0d4772e47c59b3fe87e814b6ecd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\proyectos\\TP-Bases\\templates\\HomePosLibres.tpl',
-      1 => 1559513136,
+      1 => 1559515372,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:templates/footer.tpl' => 1,
   ),
 ),false)) {
-function content_5cf44834cd4ce1_92617735 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5cf450ee16dae5_20908134 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:templates/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 $_smarty_tpl->_subTemplateRender("file:templates/NavBar.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
@@ -65,33 +65,43 @@ $_smarty_tpl->_subTemplateRender("file:templates/NavBar.tpl", $_smarty_tpl->cach
     </div>
     </div>
 
-    <tbody>
-      <tr>
-        <?php
+
+
+
+      <div class="container-fluid">
+        <table class="table table-hover">
+          <thead class="bg-primary" style="color:white;" >
+              <tr>
+                      <th scope="col">Numero Posicion</th>
+                      <th scope="col">Numero Estanteria</th>
+                      <th scope="col">Numero Fila </th>
+                </tr>
+              </thead>
+            <tbody class="contenedor-tabla" >
+              <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['datos']->value, 'dato');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['dato']->value) {
 ?>
-        <input type="text" name="" value="<?php echo $_smarty_tpl->tpl_vars['dato']->value['nro_posicion'];?>
-">
-        <td id="<?php echo $_smarty_tpl->tpl_vars['dato']->value['nro_posicion'];?>
-">numero de posicion <?php echo $_smarty_tpl->tpl_vars['dato']->value['nro_posicion'];?>
-</td>
-        <?php
+                <tr>
+                      <th scope="col"><?php echo $_smarty_tpl->tpl_vars['dato']->value['nro_posicion'];?>
+</th>
+                      <th scope="col"><?php echo $_smarty_tpl->tpl_vars['dato']->value['nro_estanteria'];?>
+</th>
+                      <th scope="col"><?php echo $_smarty_tpl->tpl_vars['dato']->value['nro_fila'];?>
+</th>
+
+                </tr>
+            <?php
 }
 }
 $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
-        <!-- <input type="" class="hidden" id="latitud <?php echo $_smarty_tpl->tpl_vars['']->value['id_denuncia'];?>
-"  value="<?php echo $_smarty_tpl->tpl_vars['denuncia']->value['latitud'];?>
-">
-        <input type="" class="hidden" id="longitud <?php echo $_smarty_tpl->tpl_vars['denuncia']->value['id_denuncia'];?>
-"  value="<?php echo $_smarty_tpl->tpl_vars['denuncia']->value['longitud'];?>
-">
-        <input type="" class="hidden" id="descripcion <?php echo $_smarty_tpl->tpl_vars['denuncia']->value['id_denuncia'];?>
-"  value="<?php echo $_smarty_tpl->tpl_vars['denuncia']->value['descripcion'];?>
-"> -->
-      </tr>
-    </tbody>
+          </tbody>
+        </table>
+      </div>
+
+
+
 
 
 

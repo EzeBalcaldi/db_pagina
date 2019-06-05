@@ -11,19 +11,31 @@ class EmpresaModel
 
   function Connect()
   {
-    return new PDO('pgsql:host=dbases.exa.unicen.edu.ar; dbname = cursada; user = unc_249407; password = mateo123');
+    //return new PDO('pgsql:host=dbases.exa.unicen.edu.ar; dbname = cursada; user = unc_249407; password = mateo123');
+    return new PDO('pgsql:host=dbases.exa.unicen.edu.ar; port = 6432; dbname = cursada; user = unc_249407; password = mateo123');
+
   }
 
-  function GetEstanteria(){
-    $sentencia = $this->db->prepare( "select * from gr01_estanteria");
-    $sentencia->execute();
-    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
-  }
+  // function GetEstanteria(){
+  //   $sentencia = $this->db->prepare( "select * from gr01_estanteria");
+  //   $sentencia->execute();
+  //   return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  // }
   function GetPosLibres($fecha){
     $sentencia = $this->db->prepare( "select * from FN_01_ListaPosLibres(?)");
     $sentencia->execute(array($fecha));
     return $sentencia->fetchAll();
 }
+
+
+function GetPosOcupadas($fecha,$datos){
+  $sentencia = $this->db->prepare( "select * from FN_01_ListaPosOcupadas(?,?)");
+  $sentencia->execute(array($fecha,$datos));
+  return $sentencia->fetchAll();
+}
+
+
+
   function Get10Clientes(){
     $sentencia = $this->db->prepare( "select * from GR01_clientes_mas_gastaron");
     $sentencia->execute();

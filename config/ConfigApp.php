@@ -14,8 +14,10 @@ class ConfigApp
     public static $PARAMS = 'params';
     public static $ACTIONS = [
       'Home' => 'EmpresaController#Home',
-      'GetPosLibres' => 'EmpresaController#GetPosLibres',
-      'Get10Clientes' => 'EmpresaController#Get10Clientes',
+      'GetPosLibresuOcupadas' => 'EmpresaController#GetPosLibresuOcupadas'
+    //  'Get10Clientes' => 'EmpresaController#Get10Clientes',
+      //'GetPosOcupadas' => 'EmpresaController#GetPosOcupadas'
+
 
       // 'jefe'=> 'JefeController#Home',
       // 'ciudadano'=> 'CiudadanoController#Home',

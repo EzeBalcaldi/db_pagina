@@ -18,21 +18,37 @@
    }
 
    function Home(){
-     $datos = $this->model->GetEstanteria();
+    // $datos = $this->model->GetEstanteria();
      //$denuncias = $this->model->GetDenuncias(1);
-     $this->view->MostrarHome($datos);
+     $this->view->MostrarHome();
    }
 
-   function GetPosLibres(){
+   function GetPosLibresuOcupadas(){
      $fecha = $_POST["FechaForm"];
-     $datos = $this->model->GetPosLibres($fecha);
+     $posLibres = $this->model->GetPosLibres($fecha);
+     $id = $_POST["IDclienteForm"];
+     $posOcupadas = $this->model->GetPosOcupadas($fecha,$id);
      //$denuncias = $this->model->GetDenuncias(1);
-     $this->view->MostrarPosLibres($datos);
+     $this->view->GetPosLibresuOcupadas($fecha,$posLibres,$posOcupadas,$id);
    }
+
+
+   function GetPosOcupadas(){
+     $fecha = $_POST["FechaForm"];
+     $id = $_POST["IDclienteForm"];
+     $datos = $this->model->GetPosOcupadas($fecha,$id);
+     $this->view->MostrarPosOcupadas($fecha,$id);
+   }
+
+
    function Get10Clientes(){
      $datos = $this->model->Get10Clientes();
      $this->view->Mostrar10Clientes($datos);
    }
+
+
+
+
    function GetAlquileresEnVencimiento(){
      $fecha = $_POST["FechaForm"];
      $datos = $this->model->GetAlquileresEnVencimiento($fecha);

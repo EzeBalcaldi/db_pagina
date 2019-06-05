@@ -28,9 +28,9 @@ class EmpresaModel
 }
 
 
-function GetPosOcupadas($fecha,$datos){
-  $sentencia = $this->db->prepare( "select * from FN_01_ListaPosOcupadas(?,?)");
-  $sentencia->execute(array($fecha,$datos));
+function GetPosOcupadas($datos){
+  $sentencia = $this->db->prepare( "select * from fn_01_listaposocupadas(?)");
+  $sentencia->execute(array($datos));
   return $sentencia->fetchAll();
 }
 

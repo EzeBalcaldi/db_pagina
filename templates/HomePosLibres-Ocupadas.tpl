@@ -14,21 +14,28 @@
     <div class="container">
       <div class="row cont ">
         <div class="col-6 roles">
+          <h2>Posiciones libres segun fecha</h2>
+
         <form method="post" action="GetPosLibresuOcupadas">
           <div class="form-group">
             <label >Ingresar fecha</label>
             <input type="date" value="{$fecha}"  class="FechaForm" id="FechaForm" name="FechaForm" >
             <date-input date="date" timezone="timezone"></date-input>
+            <button type="submit" class="btn btn-primary">Buscar</button>
+
           </div>
+
         </div>
 
           <div class="col-6 roles">
+            <h2>Posiciones ocupadas segun id cliente y la fecha actual</h2>
 
           <label >Ingresar ID del cliente</label>
           <input type="text"   value="0" class="IDclienteForm" id="IDclienteForm" name="IDclienteForm" >
+          <button type="submit" class="btn btn-primary">Buscar</button>
+
         </div>
 
-          <button type="submit" class="btn btn-primary">Buscar</button>
         </form>
       </div>
 

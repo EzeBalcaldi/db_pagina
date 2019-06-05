@@ -14,6 +14,7 @@
     <div class="container">
       <div class="row cont ">
         <div class="col-6 roles">
+          <h2>Posiciones libres segun fecha</h2>
         <form method="post" action="GetPosLibresuOcupadas">
           <div class="form-group">
             <label >Ingresar fecha</label>
@@ -23,6 +24,7 @@
         </div>
 
           <div class="col-6 roles">
+            <h2>Posiciones ocupadas segun id cliente y la fecha actual</h2>
 
           <label >Ingresar ID del cliente</label>
           <input type="text"   value="0" class="IDclienteForm" id="IDclienteForm" name="IDclienteForm" >
